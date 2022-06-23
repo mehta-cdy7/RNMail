@@ -1,4 +1,5 @@
 import {createTheme} from '@shopify/restyle'
+import { StatusBarStyle } from 'react-native';
 
 //palette
 const p ={
@@ -51,6 +52,9 @@ const p ={
         md:24,
         lg:64,
         hg:128,
+    },
+    statusBar :{
+        barStyle:'dark-content' as StatusBarStyle
     },
     textVariants:{
         defaults:{

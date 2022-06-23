@@ -11,14 +11,14 @@ const HeaderBar:React.FC<AnimatedBoxProps> = ({children , ...rest})=>{
             {...rest}
         >
             <Bar 
-            variant='headerBar' 
-            flexDirection={'row'} 
-            alignItems='center' 
-            mx='lg'
-            my='md'
-            px='sm'
-            minHeight={44}>
-                {children}
+                variant='headerBar'  
+                flexDirection={'row'} 
+                alignItems='center' 
+                mx='lg'
+                my='md'
+                px='sm'
+                minHeight={44}>
+                        {children}
             </Bar>
         </AnimatedBox>
     )
