@@ -36,11 +36,14 @@ const p ={
         red:p.red,
         blue:p.blue,
         yellow:p.yellow,
-
         $primary: p.blue70,
         $windowBackground:'#f0f0f0',
         $background: p.paper10,
         $foreground: p.paper900,
+        $sidebarBackground:p.navy20,
+        $sidebarForeground:p.navy900,
+        $sidebarSeperator:p.paper00 + '20',
+        $headerBarBackground:p.paper20,   
     },
     borderRadii:{
         xs:4,
@@ -56,6 +59,12 @@ const p ={
         },
         sidebar:{
             color:'$sidebarForeground'
+        }
+    },
+    barVariants:{
+        headerBar:{
+            bg:'$headerBarBackground',
+            borderRadius:'hg',
         }
     }
 })
