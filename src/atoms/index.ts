@@ -5,5 +5,11 @@ import AnimatedBox from './animated-box'
 import Bar from './bar'
 import Pressable from './pressable'
 import Touchable ,{TouchableOpacity} from './touchable'
+import BottomSheet from './bottom-sheet'
 
-export {Box , Text ,Container , AnimatedBox, Bar , Pressable ,Touchable, TouchableOpacity}
+
+export {Box , Text ,Container ,
+     AnimatedBox, Bar , Pressable ,
+     Touchable, TouchableOpacity,
+    BottomSheet
+    }

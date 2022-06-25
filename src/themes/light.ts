@@ -3,6 +3,7 @@ import { StatusBarStyle } from 'react-native';
 
 //palette
 const p ={
+    white:'white',
     black:"black",
     red:'red',
     blue:'blue',
@@ -33,6 +34,7 @@ const p ={
         tablet:768
     },
     colors:{
+        white:p.white,
         black:p.black,
         red:p.red,
         blue:p.blue,
