@@ -42,9 +42,7 @@ const Touchable =({
             {...rest} 
             android_ripple={{color: rippleColorValue, borderless: rippleBorderless}}
             //@ts-ignore
-            style={({pressed: isPressed})=>{
-                isPressed ? [style,pressableStyle] :style
-            }}
+            style={({pressed: isPressed})=>isPressed ? [style,pressableStyle] :style}
             />
     )
 }

@@ -1,5 +1,6 @@
+import React from 'react'
 import { AnimatedBox, Box } from "@/atoms";
-import { SharedValue, useAnimatedStyle } from "react-native-reanimated";
+import { useAnimatedStyle } from "react-native-reanimated";
 import FeatherIcon from "./icons";
 
 interface Props {
@@ -16,17 +17,18 @@ const NoteListItemActionView: React.FC<Props> =({progress})=>{
     }))
 
     return(
-        <Box flex={1} 
-        bg={"$primary"}
+        <Box 
+        flex={1} 
+        bg='$primary'
         flexDirection='row'
         alignItems={'center'}
-        justifyContent={'center'}
+        justifyContent={'flex-end'}
         pr='xl'
         >
             <AnimatedBox 
             flexDirection={'row'} 
             alignItems={'center'} 
-            justifyContent={'flex-end'}
+            justifyContent={'center'}
             style={iconStyle}>
                 <FeatherIcon name="folder" color='white' size={18}/>
                 <FeatherIcon name="arrow-right" color='white' size={12}/>

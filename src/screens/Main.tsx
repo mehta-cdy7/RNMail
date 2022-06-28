@@ -30,13 +30,13 @@ export default function MainScreen({navigation}:Props) {
   },[navigation])
 
   const handleNoteListItemPress = useCallback((noteId:string)=>{
-    
+    console.info('press')
   },[])
 
-  const handleNoteListItemSwipeLeft = useCallback((noteId:string,_conceal:()=>void)=>{
+  const handleNoteListItemSwipeLeft = useCallback((_noteId:string,_conceal:()=>void)=>{
     const {current : menu } =  refMoveNoteSheet
     if(menu){
-     menu.show()
+      menu.show()
     }
  },[])
 
@@ -60,7 +60,8 @@ export default function MainScreen({navigation}:Props) {
           </TouchableOpacity>
         </HeaderBar>
 
-        <MoveNoteSheet ref={refMoveNoteSheet} />
+       {/* <MoveNoteSheet ref={refMoveNoteSheet} onClose={()=>{}} />   */}
+     
     </Container>
   )
 }

@@ -5,7 +5,7 @@ import React, { forwardRef } from "react";
 
 type Props =BottomSheetProps & ColorProps<Theme>
 
-const BottomSheet = forwardRef<RNBottomSheet , Props>(({...rest},ref)=>{
+const BottomSheet = forwardRef<RNBottomSheet,Props>(({...rest},ref)=>{
     const theme =  useTheme<Theme>()
     const bgColor =theme.colors['$background']
     const handleColor = theme.colors['$foreground']

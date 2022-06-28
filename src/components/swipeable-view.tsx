@@ -3,7 +3,8 @@ import { PanGestureHandler, PanGestureHandlerGestureEvent, PanGestureHandlerProp
 import AnimatedBox, { AnimatedBoxProps } from '@/atoms/animated-box'
 import { Box } from '@/atoms'
 import { Dimensions } from 'react-native'
-import Animated, { interpolate, runOnJS, SharedValue, useAnimatedGestureHandler, useAnimatedStyle, useDerivedValue, useSharedValue, withTiming } from 'react-native-reanimated'
+import { interpolate, runOnJS, SharedValue, useAnimatedGestureHandler, 
+    useAnimatedStyle, useDerivedValue, useSharedValue, withTiming } from 'react-native-reanimated'
 
 type SwipeLeftCallback = ()=> any
 
@@ -32,10 +33,15 @@ const SwipeableView = forwardRef<SwipeableViewHandle , Props>((props, ref)=>{
     const translateX = useSharedValue(0)
 
     const invokeSwipeLeft = useCallback(()=>{
+        console.info('onSwipeLeft' , 'called')
         if(onSwipeLeft){
+            console.info('onSwipeLeft' , 'if')
             onSwipeLeft(()=>{
+                console.info('onSwipeLeft' , 'pass')
                 translateX.value = withTiming(0) 
             })
+        } else{
+            console.info('onSwipeLeft' , 'else')
         }
     },[onSwipeLeft])
 

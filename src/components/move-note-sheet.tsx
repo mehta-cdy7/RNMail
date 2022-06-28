@@ -25,22 +25,20 @@ const MoveNoteSheet = forwardRef<MoveNoteSheetHandle ,Props>(
         }))
 
         return  (
-            <BottomSheet ref={refBottomSheet} 
+        <BottomSheet 
+            ref={refBottomSheet} 
             index={-1}
             snapPoints={snapPoints}
-            backdropComponent={props=>(
-                <BottomSheetBackdrop {...props} appearsOnIndex={0} disappearsOnIndex={-1}/>
-            )}
             detached={true}
             bottomInset={46}
             enablePanDownToClose={true}
             style={{marginHorizontal:12}}
             onClose={onClose}
             >
-                <Box>
-                    <Text>Move</Text>
+                <Box justifyContent={'center'} alignItems={'center'}>
+                    <Text fontWeight={'bold'}>Move</Text>
                 </Box>
-            </BottomSheet>
+        </BottomSheet>
         )
 
     }

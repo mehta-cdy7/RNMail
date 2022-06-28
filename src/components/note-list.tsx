@@ -19,7 +19,7 @@ interface Props {
 
 const NoteList: React.FC<Props> = ({onScroll , contentInsetTop , onItemPress, onItemSwipeLeft})=>{
     const renderItem = useCallback(({item})=>{
-        return <NoteListItem {...item} onPress={onItemPress} onSwipeLeft={onItemSwipeLeft}/>
+        return (<NoteListItem {...item} onPress={onItemPress} onSwipeLeft={onItemSwipeLeft}/>)
     },[onItemPress , onItemSwipeLeft])
     
     return (

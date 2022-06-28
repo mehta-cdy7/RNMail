@@ -15,20 +15,19 @@ const NoteListItem: React.FC<ListItemProps> = props => {
         onPress(id)
     }, [onPress, id])
 
-    const handleSwipeLeft = useCallback((done) => {
+    const handleSwipeLeft = useCallback(done => {
         onSwipeLeft && onSwipeLeft(id, done)
     }, [id, onSwipeLeft])
 
-    const renderBackView = useCallback(({ progress }) => {
-        <NoteListItemActionView progress={progress} />
-    }, [])
+    const renderBackView = useCallback(({ progress }) => <NoteListItemActionView progress={progress} />, [])
 
     return (
         <SwipeableView 
-            bg='blue'
+            bg='yellow'
             onSwipeLeft={handleSwipeLeft}
             backView={renderBackView}>
             <Box bg={'$background'}>
+                
                 <TouchableOpacity bg='$background' px='lg' py='sm' onPress={handlePress}>
                     <Text fontWeight={'bold'} ellipsizeMode={'tail'} numberOfLines={1} ms={'xs'}>
                         {props.title}
@@ -41,6 +40,7 @@ const NoteListItem: React.FC<ListItemProps> = props => {
                         {props.body}
                     </Text>
                 </TouchableOpacity>
+                
             </Box>
         </SwipeableView>
     )
